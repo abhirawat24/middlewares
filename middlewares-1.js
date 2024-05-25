@@ -11,7 +11,7 @@ app.get("/health-checkup", function (req, res) {
     res.status(403).json({
       msg: "Unauthorized",
     });
-    return
+    return;
   }
   
   if (kidneyId !== "1" && kidneyId !== "2") {
