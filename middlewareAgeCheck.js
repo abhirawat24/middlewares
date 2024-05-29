@@ -11,6 +11,7 @@ function isOldEnoughMiddleware(req, res, next) {
     });
   }
 }
+//to use the middleware for all the below routs we can use "app.use(isOldEnoughMiddleware);", this will only be used in the app.get those are below it
 app.get("/access1", isOldEnoughMiddleware, function (req, res) {
   res.json({
     msg: "You have gotten the access1",
